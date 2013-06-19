@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>iCal天気emoji</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/Azr.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	</head>
+	<body>
+		<!-- トップ -->
+		<div id="top" data-role="page">
+			<!-- ヘッダー -->
+			<div data-role="header">
+				<h1>iCal天気emoji</h1>
+			</div>
+			<!-- 内容 -->
+			<div data-role="content">
+				<p>これは、livedoor 天気情報の</b><a href="http://weather.livedoor.com/weather_hacks/ical">iCal天気</a>を絵文字っぽく変換して表示するためのサイトです。</p>
+				<ul>
+				<li>livedoor 天気情報の仕様変更によって、突然利用できなくなる可能性があります。</li>
+				<li>結果については無保証です。</li>
+				<li>当サイトに何らかの不具合があった場合、livedoorに<b>問い合わせない</b>でください。</li>
+				</ul>
+				<p>上記に同意できる場合のみご利用ください。</p>
+				<a href="#list" data-role="button" data-icon="check" data-transition="slideup" data-theme="a">同意する</a>
+				<a href="http://www.google.co.jp/" data-role="button" data-icon="delete" data-transition="slidedown" data-theme="b">同意しない</a>
+			</div>
+		</div>
+
+		<!-- 一覧から選択 -->
+		<div id="list" data-role="page">
+			<!-- ヘッダー -->
+			<div data-role="header">
+				<h1>地域を選択</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#list" data-icon="bars" class="ui-btn-active" data-transition="flip">一覧</a></li>
+						<li><a href="#map" data-icon="gear" data-transition="flip" data-direction="reverse">地図</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div data-role="content">
+				<ul data-role="listview" data-filter="true">
+					<li data-role="list-divider" data-theme="a">北海道 - 道北</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01a&a=1">稚内</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01a&a=2">旭川</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01a&a=3">留萌</a></li>
+					<li data-role="list-divider" data-theme="a">北海道 - 道東</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01c&a=7">網走</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01c&a=8">北見</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01c&a=9">紋別</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01c&a=10">根室</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01c&a=11">釧路</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01c&a=12">帯広</a></li>
+					<li data-role="list-divider" data-theme="a">北海道 - 道央</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01b&a=4">札幌</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01b&a=5">岩見沢</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01b&a=6">倶知安</a></li>
+					<li data-role="list-divider" data-theme="a">北海道 - 道南</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01d&a=13">室蘭</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01d&a=14">浦河</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01d&a=15">函館</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=01d&a=16">江差</a></li>
+					<li data-role="list-divider" data-theme="a">青森県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=02&a=17">青森</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=02&a=18">むつ</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=02&a=19">八戸</a></li>
+					<li data-role="list-divider" data-theme="a">岩手県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=03&a=22">盛岡</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=03&a=23">宮古</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=03&a=24">大船渡</a></li>
+					<li data-role="list-divider" data-theme="a">宮城県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=04&a=25">仙台</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=04&a=26">白石</a></li>
+					<li data-role="list-divider" data-theme="a">秋田県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=05&a=20">秋田</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=05&a=21">横手</a></li>
+					<li data-role="list-divider" data-theme="a">山形県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=06&a=27">山形</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=06&a=28">米沢</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=06&a=29">酒田</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=06&a=30">新庄</a></li>
+					<li data-role="list-divider" data-theme="a">福島県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=07&a=31">福島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=07&a=32">小名浜</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=07&a=33">若松</a></li>
+					<li data-role="list-divider" data-theme="a">茨城県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=08&a=54">水戸</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=08&a=55">土浦</a></li>
+					<li data-role="list-divider" data-theme="a">栃木県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=09&a=56">宇都宮</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=09&a=57">大田原</a></li>
+					<li data-role="list-divider" data-theme="a">群馬県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=10&a=58">前橋</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=10&a=59">みなかみ</a></li>
+					<li data-role="list-divider" data-theme="a">埼玉県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=11&a=60">さいたま</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=11&a=61">熊谷</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=11&a=62">秩父</a></li>
+					<li data-role="list-divider" data-theme="a">千葉県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=12&a=67">千葉</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=12&a=68">銚子</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=12&a=69">館山</a></li>
+					<li data-role="list-divider" data-theme="a">東京都</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=13&a=63">東京</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=13&a=64">大島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=13&a=65">八丈島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=13&a=66">父島</a></li>
+					<li data-role="list-divider" data-theme="a">神奈川県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=14&a=70">横浜</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=14&a=71">小田原</a></li>
+					<li data-role="list-divider" data-theme="a">新潟県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=15&a=50">新潟</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=15&a=51">長岡</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=15&a=52">高田</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=15&a=53">相川</a></li>
+					<li data-role="list-divider" data-theme="a">富山県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=16&a=44">富山</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=16&a=45">伏木</a></li>
+					<li data-role="list-divider" data-theme="a">石川県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=17&a=46">金沢</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=17&a=47">輪島</a></li>
+					<li data-role="list-divider" data-theme="a">福井県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=18&a=48">福井</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=18&a=49">敦賀</a></li>
+					<li data-role="list-divider" data-theme="a">山梨県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=19&a=75">甲府</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=19&a=76">河口湖</a></li>
+					<li data-role="list-divider" data-theme="a">長野県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=20&a=72">長野</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=20&a=73">松本</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=20&a=74">飯田</a></li>
+					<li data-role="list-divider" data-theme="a">岐阜県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=21&a=40">岐阜</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=21&a=41">高山</a></li>
+					<li data-role="list-divider" data-theme="a">静岡県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=22&a=34">静岡</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=22&a=35">網代</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=22&a=36">三島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=22&a=37">浜松</a></li>
+					<li data-role="list-divider" data-theme="a">愛知県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=23&a=38">名古屋</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=23&a=39">豊橋</a></li>
+					<li data-role="list-divider" data-theme="a">三重県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=24&a=42">津</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=24&a=43">尾鷲</a></li>
+					<li data-role="list-divider" data-theme="a">滋賀県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=25&a=77">大津</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=25&a=78">彦根</a></li>
+					<li data-role="list-divider" data-theme="a">京都府</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=26&a=79">京都</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=26&a=80">舞鶴</a></li>
+					<li data-role="list-divider" data-theme="a">大阪府</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=27&a=81">大阪</a></li>
+					<li data-role="list-divider" data-theme="a">兵庫県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=28&a=82">神戸</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=28&a=83">豊岡</a></li>
+					<li data-role="list-divider" data-theme="a">奈良県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=29&a=84">奈良</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=29&a=85">風屋</a></li>
+					<li data-role="list-divider" data-theme="a">和歌山県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=30&a=86">和歌山</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=30&a=87">潮岬</a></li>
+					<li data-role="list-divider" data-theme="a">鳥取県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=31&a=95">鳥取</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=31&a=96">米子</a></li>
+					<li data-role="list-divider" data-theme="a">島根県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=32&a=92">松江</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=32&a=93">浜田</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=32&a=94">西郷</a></li>
+					<li data-role="list-divider" data-theme="a">岡山県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=33&a=88">岡山</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=33&a=89">津山</a></li>
+					<li data-role="list-divider" data-theme="a">広島県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=34&a=90">広島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=34&a=91">庄原</a></li>
+					<li data-role="list-divider" data-theme="a">山口県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=35&a=97">下関</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=35&a=98">山口</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=35&a=99">柳井</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=35&a=100">萩</a></li>
+					<li data-role="list-divider" data-theme="a">徳島県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=36&a=101">徳島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=36&a=102">日和佐</a></li>
+					<li data-role="list-divider" data-theme="a">香川県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=37&a=103">高松</a></li>
+					<li data-role="list-divider" data-theme="a">愛媛県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=38&a=104">松山</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=38&a=105">新居浜</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=38&a=106">宇和島</a></li>
+					<li data-role="list-divider" data-theme="a">高知県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=39&a=107">高知</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=39&a=108">室戸岬</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=39&a=109">清水</a></li>
+					<li data-role="list-divider" data-theme="a">福岡県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=40&a=110">福岡</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=40&a=111">八幡</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=40&a=112">飯塚</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=40&a=113">久留米</a></li>
+					<li data-role="list-divider" data-theme="a">佐賀県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=41&a=122">佐賀</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=41&a=123">伊万里</a></li>
+					<li data-role="list-divider" data-theme="a">長崎県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=42&a=118">長崎</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=42&a=119">佐世保</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=42&a=120">厳原</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=42&a=121">福江</a></li>
+					<li data-role="list-divider" data-theme="a">熊本県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=43&a=124">熊本</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=43&a=125">阿蘇乙姫</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=43&a=126">牛深</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=43&a=127">人吉</a></li>
+					<li data-role="list-divider" data-theme="a">大分県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=44&a=114">大分</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=44&a=115">中津</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=44&a=116">日田</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=44&a=117">佐伯</a></li>
+					<li data-role="list-divider" data-theme="a">宮崎県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=45&a=128">宮崎</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=45&a=129">延岡</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=45&a=130">都城</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=45&a=131">高千穂</a></li>
+					<li data-role="list-divider" data-theme="a">鹿児島県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=46&a=132">鹿児島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=46&a=133">鹿屋</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=46&a=134">種子島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=46&a=135">名瀬</a></li>
+					<li data-role="list-divider" data-theme="a">沖縄県</li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=47&a=136">那覇</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=47&a=137">名護</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=47&a=138">久米島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=47&a=139">南大東</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=47&a=140">宮古島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=47&a=141">石垣島</a></li>
+					<li data-theme="b"><a href="webcal://icaltenkiemoji.azurewebsites.net/icaltenkiemoji.php?p=47&a=142">与那国島</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 地図から選択 -->
+		<div id="map" data-role="page">
+			<!-- ヘッダー -->
+			<div data-role="header">
+				<h1>地域を選択</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#list" data-icon="bars" data-transition="flip">一覧</a></li>
+						<li><a href="#map" data-icon="gear" class="ui-btn-active" data-transition="flip" data-direction="reverse">地図</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div data-role="content">
+				<p>準備中…</p>
+			</div>
+		</div>
+	</body>
+</html>

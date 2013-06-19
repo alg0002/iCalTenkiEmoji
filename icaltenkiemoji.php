@@ -23,8 +23,8 @@
 			$info[$i] = str_replace("曇り", "☁", $info[$i]);
 			$info[$i] = str_replace("曇", "☁", $info[$i]);
 			$info[$i] = str_replace("雪", "⛄", $info[$i]);
-			$info[$i] = str_replace("時々", "|", $info[$i]);
-			$info[$i] = str_replace("のち", ">", $info[$i]);
+			$info[$i] = str_replace("時々", "", $info[$i]);
+			$info[$i] = str_replace("のち", "/", $info[$i]);
 		}
 		print $info[$i]."\n";
 	}
